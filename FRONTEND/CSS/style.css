@@ -2,3 +2,41 @@
     margin: 0;
     padding: 0;
 }
+
+html{
+    scroll-behavior: smooth;
+    scroll-padding-top: 6rem;
+    overflow-x: hidden;
+}
+
+:root{
+    --bg-color: black;
+    --fontsize: 1.3rem;
+    --font-family: 'poppins' sans;
+    --text-transform: capitalize;
+    --color: orange;
+    --font-weight: bolder;
+    --letter-spacing: 2px;
+}
+.chat-header{
+    width: 100%;
+    padding: 2% 1%;
+    background-color: var(--bg-color);
+}
+.chat-header > .navbar{
+    display: flex;
+    width: 100%;
+    justify-content: center;
+    align-items: center;
+}
+
+.navbar > ul{
+    list-style: none;
+    display: flex;
+}
+
+.navbar > ul > li{
+    color: var(--color);
+    margin-right: 5px;
+    text-transform: var(--text-transform);
+}
