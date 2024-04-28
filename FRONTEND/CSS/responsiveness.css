@@ -1,7 +1,47 @@
 
 
-
 @media only screen and (max-width: 768px){
+    *{
+        margin: 0;
+        padding: 0;
+    }
+
+    
+    .chat-dashboard{
+        width: 100%;
+        padding: 1% 1%;
+        background-color: red;
+        box-shadow: 1px 1px 1px  1px whitesmoke;
+    }
+
+    .header{
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+    }
+
+    .friend-name{
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        width: 50%;
+    }
+
+    .friend-name > .fa{
+        color: var(--color);
+        font-size: 1.5rem;
+        font-weight: var(--font-weight);
+        margin-left: 2.5%;
+        margin-right: 4%;
+    }
+
+    .friend-name > img{
+        padding: 10px;
+        border-radius: 100%;
+    }
+
+
+
 
     
 
