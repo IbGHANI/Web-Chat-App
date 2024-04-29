@@ -95,8 +95,7 @@
         padding: 3%;
     }
 
-    .container > .recieving-text,
-    .container > .sender-text{
+    .recieving-text{
         width: 50%;
         
     }
