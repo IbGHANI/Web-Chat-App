@@ -110,13 +110,13 @@
         border-top-left-radius: 1px;
     }
 
-    .container > .sender-text > p{
+    /* .container > .sender-text > p{
         padding: 12px;
         border: none;
         border-radius: 10px;
         background-color: var(--bg-color);
         border-top-right-radius: 1px;
-    }
+    } */
 
 
 
