@@ -1,6 +1,6 @@
 
 
-@media only screen and (max-width: 768px){
+/* @media only screen and (max-width: 768px){
     *{
         margin: 0;
         padding: 0;
@@ -30,9 +30,11 @@
         background-color: black;
         box-shadow: 1px 1px 1px  1px ;
         position: fixed;
+        z-index: 100;
     }
 
     .header{
+        width: 100%;
         display: flex;
         justify-content: space-between;
         align-items: center;
@@ -43,6 +45,7 @@
         justify-content: center;
         align-items: center;
         width: 50%;
+        background-color: white;
     }
 
     .friend-name > .fa{
@@ -70,6 +73,7 @@
         justify-content: right;
         align-items: center;
         padding: 10px;
+        background-color: red;
     } 
 
     .call-Vcall > .fa{
@@ -85,14 +89,13 @@
         justify-content: center;
         align-items: center;
         height: 100vh;
-        background: black;
     }
 
     .chat-landing-page > .container{
         width: 100%;
         display: block;
         height: 100vh;
-        background-color: var(--bg-color);
+        background-color: var(--color);
         padding: 3%;
     }
 
@@ -127,27 +130,325 @@
         border-top-right-radius: 1px;
     }
 
-    /* .chat-landing-page > .content-box{
-        width: 100%;
+    .content-box {
         display: flex;
         align-items: center;
-        background: var(--color);
-        padding: 10px;
-        bottom: 10px;
+        background-color: #f0f0f0;
+        padding: 12px;
+        border-radius: 10px;
+        margin-bottom: 10px;
+        max-width: 100%;
 
     }
 
-    .chat-landing-page > .content-box > .icon{
-        width: 100%;
+    .icons {
+        margin-right: 10px;
+    }
+
+    .textarea {
+        flex-grow: 1;
         display: flex;
         align-items: center;
-        position: fixed;
-        background-color: var(--bg-color);
-        z-index: 999;
+    }
+
+    .textarea input[type="text"] {
+        border: none;
+        background-color: transparent;
+        outline: none;
+        font-size: 16px;
+        padding: 8px;
+        width: 100%;
+    }
+
+    .voice-n-send-icons {
+        display: flex;
+        align-items: center;
+        justify-content: flex-end;
+        margin-left: 10px;
+    }
+
+    .voice-n-send-icons i {
+        margin-left: 10px;
+        color: #666;
+        cursor: pointer;
+    }
+
+    .replying-box {
+        background-color: #fff;
+        padding: 10px;
+        border-radius: 10px;
+        box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+        max-width: 400px; 
+    }
+
+
+} */
+
+
+/* Background color: #1F1F1F or #181818
+Text color: #FFFFFF
+Message bubble color (sent messages): #0D6EF6
+Message bubble color (received messages): #242424
+Chat header color: #333333
+Input field background color: #333333
+Input text color: #FFFFFF
+Send button color: #0D6EF6 */
+
+@media only screen and (max-width: 768px){
+
+    .chat-container {
+        max-width: 100%;
+        height: 100vh;
+        background-color: black;
+        box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+        overflow: hidden;
+    }
+
+    .chat-header {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        background-color: #333333;
+        color: #fff;
+        padding: 2% 2% ;
+    }
+
+    .friend-name{
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        width: 45%;
+    }
+
+    .friend-name > .fa{
+        color: purple;
+        font-size: 1.6rem;
+        font-weight: var(--font-weight);
+        margin-left: 1%;
+        margin-right: 4%;
+    }
+
+    .friend-name > img{
+        padding: 10px;
+        border-radius: 100%;
+    }
+
+    .friend-name > p{
+        font-size: 1.1rem;
+        text-transform: var(--text-transform);
+        color:  white;
+    }
+
+    .call-Vcall{
+        display: flex;
+        width: 20%;
+        justify-content: space-between;
+        align-items: center;
+        padding: 10px;
+    } 
+
+    .call-Vcall > .fa{
+        font-size: 1.5rem;
+        color: purple;
+        /* margin-right: 20%; */
+    }
+
+
+    .chat-messages {
+        padding: 10px;
+        overflow-y: scroll;
+        height: 80vh;
+    }
+
+    .message {
+        margin-bottom: 10%;
+        margin-top: 10%;
+    }
+
+    .message > .content{
+        color: white;
+        padding: 12px;
+        border: none;
+        border-radius: 10px;
+        background-color: purple;
+        border-top-left-radius: 1px;
+    }
+
+    /* .message .sender {
+        font-weight: bold;
     } */
 
+    .message.received {
+        text-align: right;
+    }
+
+    .chat-input {
+        display: flex;
+        align-items: center;
+        padding: 10px;
+    }
+
+    .chat-input input {
+        flex: 1;
+        padding: 8px;
+        border: 1px solid purple;
+        border-radius: 5px;
+        margin-right: 5px;
+        outline: none;
+        background-color: black;
+        color: white;
 
 
+    }
+/* 
+    .chat-input button {
+        background-color: #007bff;
+        color: #0D6EF6;
+        border: none;
+        border-radius: 5px;
+        cursor: pointer;
+    } */
     
+    .chat-input > a{
+        color: purple;
+    }
+    .chat-input > a > .fa{
+        font-size: 1.2rem;
+        color: purple;
+    }
+
+    .chat-input button:hover {
+        background-color: #0056b3;
+    }
+
+}
+
+
+@media only screen and (max-width: 932px){
+    
+    .chat-container {
+        max-width: 100%;
+        height: 100vh;
+        background-color: black;
+        box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+        overflow: hidden;
+    }
+
+    .chat-header {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        background-color: #333333;
+        color: #fff;
+        padding: 2% 2% ;
+    }
+
+    .friend-name{
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        width: 45%;
+    }
+
+    .friend-name > .fa{
+        color: purple;
+        font-size: 1.6rem;
+        font-weight: var(--font-weight);
+        margin-left: 1%;
+        margin-right: 4%;
+    }
+
+    .friend-name > img{
+        padding: 10px;
+        border-radius: 100%;
+    }
+
+    .friend-name > p{
+        font-size: 1.1rem;
+        text-transform: var(--text-transform);
+        color:  white;
+    }
+
+    .call-Vcall{
+        display: flex;
+        width: 20%;
+        justify-content: space-between;
+        align-items: center;
+        padding: 10px;
+    } 
+
+    .call-Vcall > .fa{
+        font-size: 1.5rem;
+        color: purple;
+        /* margin-right: 20%; */
+    }
+
+
+    .chat-messages {
+        padding: 10px;
+        overflow-y: scroll;
+        height: 80vh;
+    }
+
+    .message {
+        margin-bottom: 10%;
+        margin-top: 10%;
+    }
+
+    .message > .content{
+        color: white;
+        padding: 12px;
+        border: none;
+        border-radius: 10px;
+        background-color: purple;
+        border-top-left-radius: 1px;
+    }
+
+    /* .message .sender {
+        font-weight: bold;
+    } */
+
+    .message.received {
+        text-align: right;
+    }
+
+    .chat-input {
+        display: flex;
+        align-items: center;
+        padding: 10px;
+    }
+
+    .chat-input input {
+        flex: 1;
+        padding: 8px;
+        border: 1px solid purple;
+        border-radius: 5px;
+        margin-right: 5px;
+        outline: none;
+        background-color: black;
+        color: white;
+
+
+    }
+/* 
+    .chat-input button {
+        background-color: #007bff;
+        color: #0D6EF6;
+        border: none;
+        border-radius: 5px;
+        cursor: pointer;
+    } */
+    
+    .chat-input > a{
+        color: purple;
+    }
+    .chat-input > a > .fa{
+        font-size: 1.2rem;
+        color: purple;
+    }
+
+    .chat-input button:hover {
+        background-color: #0056b3;
+    }
 
 }
