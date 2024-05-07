@@ -28,6 +28,188 @@ body{
     display: flex;
 }
 
+.container > .leftside{
+    position: relative;
+    flex: 25%;
+}
+
+.leftside > .header{
+    width: 100%;
+    height: 60px;
+    background-color: #ededed;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0 15px;
+}
+
+.userImg{
+    position: relative;
+    width: 40px;
+    height: 40px;
+    overflow: hidden;
+    border-radius: 50%;
+    cursor: pointer;
+}
+.userImg > .cover{
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.nav-icon{
+    display: flex;
+}
+.nav-icon > li{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    list-style: none;
+    cursor: pointer;
+    color: #51585c;
+    font-size: 1.2rem;
+    margin-left: 22px;
+}
+
+.search-chat {
+    position: relative;
+    width: 100%;
+    height: 40px;
+    background-color: #f6f6f6;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 0 15px;
+}
+
+.search-chat div{
+    width: 100%;
+}
+
+.search-chat > div > input{
+    width: 100%;
+    outline: none;
+    border: none;
+    background-color: #fff;
+    padding: 6px;
+    height: 33px;
+    border-radius: 10px;
+    font-size: 13px;
+    padding-left: 40px;
+} 
+
+.search-chat > div > input::placeholder{
+    color: #51585c;
+}
+.search-chat > div > i{
+    position: absolute;
+    left: 24px;
+    top: 12px;
+    font-size: 1rem;
+}
+
+/* chat list here */
+
+.chatlist{
+    position: relative;
+    height: calc(100% - 100px);  /* 60px + 40px*/
+    overflow-y: auto;
+}
+
+.chatlist > .block{
+    position: relative;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 15px;
+    border-bottom: 1px solid #ededed;
+    cursor: pointer;
+}
+
+.chatlist > .block > .imgbx{
+    position: relative;
+    min-width: 40px;
+    height: 40px;
+    overflow: hidden;
+    border-radius: 50%;
+    cursor: pointer;
+    margin-right: 10px;
+}
+.chatlist > .block > .imgbx > .cover{
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.chatlist > .block > .details{
+    position: relative;
+    width: 100%;
+}
+
+.chatlist > .block > .details > .listHead{
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 5px;
+}
+
+.chatlist > .block > .details > .listHead > h5{
+    font-size: 14px;
+    text-transform: capitalize;
+    font-weight: 600;
+    font-family: 'poppins' sans-serif;
+    color: #111;
+    
+}
+
+.chatlist > .block > .details > .listHead > .time{
+    font-size: 11px;
+    color: #aaa;
+    text-transform: capitalize;
+}
+
+.chatlist > .block.unread > .details > .listHead > .time{
+    color: #05d755;
+}
+.message-p{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.message-p > p{
+    color: #aaa;
+    display: -webkit-box;
+    -webkit-line-clamp: 1;
+    -webkit-box-orient: vertical;
+    font-size: 11px;
+    font-family: 'poppins' sans-serif;
+    text-transform: capitalize;
+    overflow: hidden;
+    text-overflow: ellipsis;
+
+}
+
+.message-p > h8{
+    background-color: #05d755;
+    min-width: 17px;
+    height: 17px;
+    border-radius: 50%;
+    color: #fff;
+    font-size: 10px;
+    text-align: center;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+}
+
 
 /* chatting box here */
 
@@ -84,10 +266,14 @@ body{
 
 @media only screen and (max-width: 768px){
 
+
+    body{
+        height: 100%;
+    }
     .container{
         position: relative;
         width: 100%;
-        height: 100vh;
+        height: 100%;
         background-color: white;
         display: flex;
         justify-content: center;
@@ -97,7 +283,6 @@ body{
     .container > .leftside{
         display: block;
         width: 100%;
-        height: 100vh;
     }
     
 
@@ -121,7 +306,7 @@ body{
     .leftside > .search-chat{
         width: 100%;
     }
-
+    
     .leftside > .search-chat > div > input{
         width: 100%;
         padding: 5px;
@@ -146,14 +331,6 @@ body{
     .chatlist > .block > .imgbx{
         min-width: 37px;
         height: 37px;
-    }
-    .chatlist > .block > .imgbx > .cover{
-        position: absolute;
-        top: 0;
-        left: 0;
-        width: 100%;
-        height: 100%;
-        object-fit: cover;
     }
 
     .chatlist > .block > .details > .listHead > h5{
@@ -167,10 +344,15 @@ body{
 
 @media only screen and (max-width: 932px){
 
+    
+
+    body{
+        height: 100%;
+    }
     .container{
         position: relative;
         width: 100%;
-        height: 100vh;
+        height: 100%;
         background-color: white;
         display: flex;
         justify-content: center;
@@ -180,7 +362,6 @@ body{
     .container > .leftside{
         display: block;
         width: 100%;
-        height: 100vh;
     }
     
 
@@ -204,9 +385,7 @@ body{
     .leftside > .search-chat{
         width: 100%;
     }
-
-
-
+    
     .leftside > .search-chat > div > input{
         width: 100%;
         padding: 5px;
@@ -232,14 +411,6 @@ body{
         min-width: 37px;
         height: 37px;
     }
-    .chatlist > .block > .imgbx > .cover{
-        position: absolute;
-        top: 0;
-        left: 0;
-        width: 100%;
-        height: 100%;
-        object-fit: cover;
-    }
 
     .chatlist > .block > .details > .listHead > h5{
         font-size: 11px;
@@ -248,5 +419,4 @@ body{
         font-size: 10px;
     }
 
-    
 }
