@@ -34,7 +34,7 @@
 
             <!-- chat list -->
             <div class="chatlist">
-                <div class="block">
+                <div class="block" id="main-chat">
                     <div class="imgbx">
                         <img src="./IMAGES/bg.jpg" alt="" class="cover">
                     </div>
@@ -49,7 +49,7 @@
                     </div>
                 </div>
 
-                <div class="block unread">
+                <div class="block unread" id="main-chat">
                     <div class="imgbx">
                         <img src="./IMAGES/1.JPG" alt="" class="cover">
                     </div>
@@ -65,7 +65,7 @@
                     </div>
                 </div>
 
-                <div class="block">
+                <div class="block" id="main-chat">
                     <div class="imgbx">
                         <img src="./IMAGES/2.JPG" alt="" class="cover">
                     </div>
@@ -80,7 +80,7 @@
                     </div>
                 </div>
 
-                <div class="block">
+                <div class="block" id="main-chat">
                     <div class="imgbx">
                         <img src="./IMAGES/3.JPG" alt="" class="cover">
                     </div>
@@ -95,7 +95,7 @@
                     </div>
                 </div>
 
-                <div class="block">
+                <div class="block" id="main-chat">
                     <div class="imgbx">
                         <img src="./IMAGES/4.JPG" alt="" class="cover">
                     </div>
@@ -110,7 +110,7 @@
                     </div>
                 </div>
 
-                <div class="block">
+                <div class="block" id="main-chat">
                     <div class="imgbx">
                         <img src="./IMAGES/5.JPG" alt="" class="cover">
                     </div>
@@ -300,6 +300,15 @@
 
         </div>
     </div>
+
+
+    <script>
+
+        document.getElementById("main-chat").addEventListener("click", function(){
+            // redirect to another page
+            window.location.href = "./HTML/chat.html";
+        });
+    </script>
 
 </body>
 </html>

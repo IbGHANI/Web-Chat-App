@@ -1,0 +1,333 @@
+
+
+@import url('https://fonts.googleapis.com/css2?family=sans:wght@300;400;500;600;700&display=swap');
+
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'open sans' sans-serif;
+}
+
+body{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    background-color: black;
+
+}
+
+.container{
+    position: relative;
+    width: 90%;
+    max-width: 100%;
+    height: calc(100vh - 40px);
+    background-color: white;
+    display: flex;
+}
+
+
+.container > .rightside{
+    position: relative;
+    flex: 70%;
+    background-color: #e5ddd5;
+    border-left: 1px solid #e5ddd5;
+}
+
+.container > .rightside::before{
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: url(../IMAGES/whats.image.png) ;
+    opacity: 0.10;
+}
+.rightside > .header{
+    width: 100%;
+    height: 60px;
+    background-color: #ededed;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0 15px;
+}
+
+.rightside > .header > .ImgText .userImg{
+    position: relative;
+    min-width: 40px;
+    height: 40px;
+    overflow: hidden;
+    border-radius: 50%;
+    cursor: pointer;
+    margin-right: 10px;
+}
+.rightside > .header > .ImgText > .fa{
+    margin-right: 10px;
+    color: #51585c;
+}
+.rightside > .header > .ImgText .userImg > .cover{
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+.rightside > .header > .ImgText{
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.nav-icon{
+    display: flex;
+}
+.nav-icon > li{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    list-style: none;
+    cursor: pointer;
+    color: #51585c;
+    font-size: 1.2rem;
+    margin-left: 16px;
+}
+
+
+.rightside > .header > .ImgText > h5{
+    color: #000000;
+    font-size: 14px;
+    text-transform: capitalize;
+    font-family: 'poppins' sans-serif;
+    font-weight: 500;
+    line-height: 15px;
+    margin-left: 15px;
+}
+
+.rightside > .header > .ImgText > h5 > span{
+    font-size: 10px;
+    color: #51585c;
+}
+
+
+.chatBox{
+    width: 100%;
+    height: calc(100% - 120px); /*60 + 60*/
+    padding: 50px;
+    overflow-y: auto;
+}
+
+.message{
+    position: relative;
+    width: 100%;
+    display: flex;
+    margin: 5px 0;
+}
+.message > p{
+    position: relative;
+    right: 0;
+    text-align: right;
+    max-width: 65%;
+    padding: 12px;
+    background-color: #dcf8c6;
+    border-radius: 10px;
+    font-size: 12px;
+    font-family: 'poppins' sans-serif;
+}
+.message > p::before{
+    content: '';
+    position: absolute;
+    width: 20px;
+    top: 0;
+    right: -12px;
+    height: 10px;
+    background:  linear-gradient(135deg,#dcf8c6 0%, #dcf8c6 50%,transparent 50%,transparent);
+}
+
+.message > p > span{
+    display: block;
+    margin-top: 5px;
+    font-size: 9px;
+    opacity: 0.5;
+}
+
+.my-message{
+    justify-content: flex-end;
+}
+.frnd-message{
+    justify-content: flex-start;
+}
+
+.frnd-message > p{
+    background: #fff;
+    text-align: left;
+}
+
+.frnd-message > p::before{
+    content: '';
+    position: absolute;
+    width: 20px;
+    top: 0;
+    left: -10px;
+    height: 10px;
+    background:  linear-gradient(225deg,#fff 0%, #fff 50%,transparent 50%,transparent);
+
+}
+
+.reply-box{
+    position: relative;
+    width: 100%;
+    height: 60px;
+    background: #ededed;
+    padding: 15px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 0;
+}
+
+.reply-box > .fa{
+    font-size: 13px;
+    color: #51585c;
+    font-weight: bolder;
+}
+.reply-box > .fa:nth-child(3){
+    margin-right: 10px;
+
+}
+.reply-box > input{
+    position: relative;
+    width: 90%;
+    margin: 0 20px;
+    padding: 10px 20px;
+    border-radius: 10px;
+    border: none;
+    outline: none;
+    background-color: #fff;
+    font-size: 12px;
+    font-family:  'poppins' sans-serif;
+    color: #000000;
+}
+
+.reply-box > input::placeholder{
+    text-transform: capitalize;
+    color: #000000;
+}
+
+
+@media only screen and (max-width: 768px){
+
+    .container{
+        position: relative;
+        width: 100%;
+        height: 100vh;
+        background-color: white;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+
+    .container > .leftside{
+        display: none;
+     
+    }
+    
+    .container > .rightside{
+        width: 100%;
+        display: block;
+        width: 100%;
+        height: 100vh;
+        background-color: #e5ddd5;
+    }
+
+    .container > .rightside > .header{
+        width: 100%;
+        height: 50px;
+    }
+
+    .rightside > .header > .ImgText .userImg{
+        margin-right: 1px;
+    }
+    .chatBox{
+        padding: 9.5px;
+    }
+
+    .message > p{
+        padding: 10px;
+        font-size: 11px;
+
+    }
+    .reply-box{
+        width: 100%;
+        height: 70px;
+    }
+    .reply-box > .fa{
+        font-size: 17px;
+    }
+    .reply-box > input{
+        width: 90%;
+        background-color: #fff;
+        color: #000000;
+    }
+}
+
+@media only screen and (max-width: 932px){
+
+    .container{
+        position: relative;
+        width: 100%;
+        height: 100vh;
+        background-color: white;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+
+    .container > .leftside{
+        display: none;
+     
+    }
+    
+    .container > .rightside{
+        width: 100%;
+        display: block;
+        width: 100%;
+        height: 100vh;
+        background-color: #e5ddd5;
+    }
+
+    .container > .rightside > .header{
+        width: 100%;
+        height: 50px;
+    }
+
+    .rightside > .header > .ImgText .userImg{
+        margin-right: 1px;
+    }
+    .chatBox{
+        padding: 9.5px;
+    }
+
+    .message > p{
+        padding: 10px;
+        font-size: 11px;
+
+    }
+    .reply-box{
+        width: 100%;
+        height: 70px;
+    }
+    .reply-box > .fa{
+        font-size: 17px;
+    }
+    .reply-box > input{
+        width: 90%;
+        background-color: #fff;
+        color: #000000;
+    }
+  
+}
