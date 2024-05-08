@@ -1,0 +1,26 @@
+
+
+
+@media only screen and (max-width: 768px){
+
+    *{
+        padding: 0;
+        margin: 0;
+        box-sizing: border-box;
+    }
+
+    .container{
+        position: relative;
+        display: block;
+        padding: 10% 7%;
+        background: #ffd;
+        min-height: 100vh;
+    }
+
+
+}
+
+
+@media only screen and (max-width: 932px){
+
+}
