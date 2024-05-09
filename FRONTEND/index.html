@@ -17,7 +17,7 @@
             <!-- header -->
             <div class="header">
                 <div class="userImg">
-                    <img src="./IMAGES/mypics.jpg" alt="" class="cover">
+                    <img src="./IMAGES/mypics.jpg" alt="" class="cover" id="sign-Up">
                 </div>
                 <ul class="nav-icon">
                     <li><i class="fa fa-comment" aria-hidden="true"></i></li>
@@ -278,7 +278,6 @@
             <!-- chat box here -->
 
 
-
         </div>
     </div>
 
@@ -288,6 +287,10 @@
         document.getElementById("main-chat").addEventListener("click", function(){
             // redirect to another page
             window.location.href = "./HTML/chat.html";
+        });
+        document.getElementById("sign-Up").addEventListener("click", function(){
+            //redirect to sign up page
+            window.location.href = "../HTML/sign-up.html.";
         });
     </script>
 
