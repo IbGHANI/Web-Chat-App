@@ -73,6 +73,10 @@ body{
     font-size: 1.2rem;
     margin-left: 22px;
 }
+.nav-icon > li a{
+    color: #51585c;
+    text-decoration: none;
+}
 
 .search-chat {
     position: relative;
