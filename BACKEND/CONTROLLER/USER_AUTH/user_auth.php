@@ -8,10 +8,24 @@ if(isset($_POST['Sign-Up'])){
     $Email = htmlspecialchars(trim($_POST['Email']));
     $Password = htmlspecialchars(trim($_POST['Password']));
     $Confirm_password = htmlspecialchars(trim($_POST['Confirm_Password']));
+    $hashed_password = sha1($this->Password);
+
+
+    // the token for verification here
 
 
 
+    // save user
 
+    $connection = db_connector;
+    $Data_base = $connection->getConnection();
+    $save_user = new userAuth($Data_base);
+    $save_user = setFull_name($Full_name);
+    $save_user = setEmail($Email);
+    $save_user = setPassword($Password);
+    $save_user = setConfirm_Password($Confirm_password);
+    $save_user = setPatterns();
+    $save_user = validateData();
 
 }
 
