@@ -74,45 +74,6 @@ body{
     margin-left: 22px;
 }
 
-/* 
-.search-chat {
-    position: relative;
-    width: 100%;
-    height: 40px;
-    background-color: #242526;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    padding: 0 15px;
-}
-
-.search-chat div{
-    width: 100%;
-}
-
-.search-chat > div > input{
-    width: 100%;
-    outline: none;
-    border: none;
-    background-color: #3a3b3c;
-    padding: 6px;
-    height: 33px;
-    border-radius: 10px;
-    font-size: 13px;
-    padding-left: 40px;
-} 
-
-.search-chat > div > input::placeholder{
-    color: #fff;
-}
-.search-chat > div > i{
-    position: absolute;
-    left: 24px;
-    top: 12px;
-    font-size: 1.3rem;
-    color: #FF5CA1;
-} */
-
 /* chat list here */
 
 .chatlist{
@@ -128,7 +89,7 @@ body{
     justify-content: center;
     align-items: center;
     padding: 15px;
-    border-bottom: 1px solid ;
+    border-bottom: 1px solid #242526;
     cursor: pointer;
     background-color: #18191a;
 }
@@ -257,12 +218,13 @@ body{
 
     .chatlist{
         width: 100%;
-        margin-top: 15%;
+        margin-top: 55px;
     }
 
     .chatlist > .block{
         width: 100%;
         padding: 13px;
+        border-bottom: 1px solid #242526;
     }
     
     .chatlist > .block > .imgbx{
@@ -321,12 +283,13 @@ body{
 
     .chatlist{
         width: 100%;
-        margin-top: 15%;
+        margin-top: 55px;
     }
 
     .chatlist > .block{
         width: 100%;
         padding: 13px;
+        border-bottom: 1px solid #242526;
     }
     
     .chatlist > .block > .imgbx{
