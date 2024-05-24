@@ -26,8 +26,17 @@ if(isset($_POST['Sign-Up'])){
     $save_user = setConfirm_Password($Confirm_password);
     $save_user = setPatterns();
     $save_user = validateData();
+    $save_user->signUp();
+    echo "<script>alert(".$save_user->getErrorMsg().")</script>";
 
 }
+
+
+
+
+
+
+
 
 
 
